@@ -7,6 +7,18 @@
 <h1>Hello Everyone!</h1>
 <p id="test">“Nothing is impossible. The word itself says I'm Possible.” </p>
   <script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script>
+  <script>
+    Sailthru.track('click', {
+   "sectionId" : <section id>,
+   "url" : <clicked URL>,
+   "onSuccess" : function(response) {
+       console.log('Manual track click - SUCCESS', response);
+   },
+   "onError" : function(response) {
+       console.log('Manual track click - ERROR', response);
+   }
+});
+  </script>
 <script>Sailthru.init({ customerId: '140545c383793e6cfc3cf761953760cc', overlayKeyValue: {test: "test"} });</script>
 </body>
 </html>
